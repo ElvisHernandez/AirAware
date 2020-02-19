@@ -216,3 +216,8 @@ body {
 .bottom-hero-text h5 {
   color: rgb(34, 34, 104);
 }
+
+#inner-page-title {
+  font-size: 30px;
+  justify-content: center;
+}

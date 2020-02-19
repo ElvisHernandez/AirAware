@@ -8,7 +8,7 @@ const About = () => {
   return (
     <>
         <div className="top-banner-inner-pages">
-        <div id="solutions">Header for About</div>
+        <div id="inner-page-title">Header for About</div>
         </div>
       <div className="about-body">
         <p>

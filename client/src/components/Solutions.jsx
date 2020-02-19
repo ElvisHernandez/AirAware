@@ -5,7 +5,7 @@ const Solutions = () => {
   return (
     <>
     <div className="top-banner-inner-pages">
-        <div id="solutions">Solution</div>
+        <div id="inner-page-title">Solution</div>
         </div>
         <div id="solutions-container">
           Good Moderate Hazardous Toxic
