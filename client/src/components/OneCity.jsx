@@ -18,8 +18,8 @@ import { solutionsObj } from "../constants"
     return (
         <div className="display-city-card">  
             <img style={{display:'block'}}  src={cityUrl} alt=""></img>
-            <div className="city-information" style={{textAlign:'center',alignItems:"center",marginTop:"6rem",marginRight:"2rem"}}>
-                
+
+            <div className="city-information" style={{textAlign:'center',alignItems:"center",marginTop:"6rem",marginRight:"2rem"}}>      
                 <span style={{fontSize:"2rem",fontWeight:"800"}}>{formattedCity}</span> <br></br>
                 <span style={{fontSize:"1.2rem"}}>{formattedDate}</span><br></br>
                 <span style={{fontWeight:'600'}}> AQI: {aqi} </span> <br></br>
@@ -41,12 +41,9 @@ import { solutionsObj } from "../constants"
                     }
                   </span>
                 </span></h2>
-                        <h3>Additional Information</h3>
-                      <p>{solutionsObj[hazardLevels.find(({ level }) => aqi <= level.range).level
-                        .hazard]}</p>
-
-
-
+                        <h3 style={{marginTop:"2rem"}}>Additional Information</h3>
+                      <ul style={{listStyleType:"none",marginTop:"2rem"}}>{solutionsObj[hazardLevels.find(({ level }) => aqi <= level.range).level
+                      .hazard].map( info => <li style={{marginTop:"1rem"}}>{info}</li>)}</ul>
             </div>
         </div>
     )

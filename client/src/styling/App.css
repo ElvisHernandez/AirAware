@@ -109,12 +109,11 @@ body {
 .about-body {
   justify-content: center;
   display: flex;
-  justify-content: left;
-  text-align: left;
+  justify-content: center;
+  text-align: center;
   padding-top: 55px; 
   margin: 5px;
   flex-direction: column;
-  font-weight: bolder;
 }
 
 .about-body2 {
@@ -128,6 +127,7 @@ body {
   flex-direction: column;
 }
                                         /* THIS IS THE ONE CITY PAGE */
+                                        
 .display-city-card {
   position: relative;
   display: flex;
