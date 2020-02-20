@@ -101,5 +101,3 @@ export const solutionsObj = {
   Combine trips and share rides, Postpone using gasoline mowers, Barbecue without starter fluid`]
   }
   
-
-
