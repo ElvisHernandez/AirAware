@@ -16,20 +16,23 @@ const About = () => {
             AirAware is a consulting company that provides businesses and
             individuals with everyday air pollution information in the United
             States and strategies about air pollution.
-          </p>
-        </div>
 
-        <div className="mission-statement">
-        <p>
-            AirAware is a consulting company that provides businesses and
-            individuals with everyday air pollution information in the United
-            States and strategies about air pollution.
-            
             Our application is in an experimental phase as we spend 
             time and resources contributing to improve 
             how we retrieve up to date forecasts and more 
             comprehensive information regarding the air quality and pollutants effecting 
             your local area. 
+          </p>
+        </div>
+
+        <div className="mission-statement">
+        <p>
+            
+            {/* Our application is in an experimental phase as we spend 
+            time and resources contributing to improve 
+            how we retrieve up to date forecasts and more 
+            comprehensive information regarding the air quality and pollutants effecting 
+            your local area.  */}
           </p>
         </div>
       </div>

@@ -41,9 +41,9 @@ import { solutionsObj } from "../constants"
                     }
                   </span>
                 </span></h2>
-                        <h3>Additional Information</h3>
-                      <p>{solutionsObj[hazardLevels.find(({ level }) => aqi <= level.range).level
-                        .hazard]}</p>
+                        <h3 style={{marginTop:"2rem"}}>Additional Information</h3>
+                      <ul style={{listStyleType:"none",marginTop:"2rem"}}>{solutionsObj[hazardLevels.find(({ level }) => aqi <= level.range).level
+                      .hazard].map( info => <li style={{marginTop:"1rem"}}>{info}</li>)}</ul>
 
 
 
