@@ -57,7 +57,7 @@ const About = () => {
         </a>
         <a className="portrait-link" href="https://www.linkedin.com/in/krisi-keranova-9bbba819/" target="_blank">
           <img id="about-person" src={KeranoraKrisi} alt="image of Krisi" />
-          <p>Krisi Keranora</p>
+          <p>Krisi Keranova</p>
         </a>
       </div>
       <div className="hr"><hr /></div>
