@@ -127,6 +127,7 @@ body {
   flex-direction: column;
 }
                                         /* THIS IS THE ONE CITY PAGE */
+                                        
 .display-city-card {
   position: relative;
   display: flex;

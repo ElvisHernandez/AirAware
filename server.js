@@ -5,14 +5,7 @@ const axios = require('axios');
 const express = require('express');
 const path = require('path');
 const app = express();
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client/build')));
-  // Handle React routing, return all requests to React app
-  app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
+
 // let cities = [];
 app.get('/api', (request, response) => {
   axios
@@ -44,7 +37,11 @@ app.get('/api/:state/:city', (request, response) => {
     )
     .then(res => {
       const { city, state, current } = res.data.data;
-      response.json({ id: `${city}-${state}`, ...current.pollution, ...current.weather });
+      response.json({
+        id: `${city}-${state}`,
+        ...current.pollution,
+        ...current.weather
+      });
     })
     .catch(err => console.log(err));
 });
@@ -61,6 +58,16 @@ app.get('/image/:city', (request, response) => {
       );
     });
 });
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  // Handle React routing, return all requests to React app
+  app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`API listening on port ${port}...`);
