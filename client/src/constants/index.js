@@ -62,7 +62,7 @@ export const monthToMonth = {
 
 export const solutionsObj = {
   "Good": `
-  AQI is 0 to 50. Air quality is considered satisfactory, and air pollution poses little or no risk. 
+  Air quality is considered satisfactory, and air pollution poses little or no risk. 
   Weather Conditions:
   Cool summer temperatures
   Windy conditions
@@ -74,7 +74,7 @@ export const solutionsObj = {
   Conserve electricity-set A/C to highest comfortable level`,
 
   "Moderate": `
-  AQI is 51 to 100. Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people. For example, people who are unusually sensitive to ozone may experience respiratory symptoms. Unusually sensitive people should consider reducing prolonged or heavy outdoor exertion.
+  Air quality is acceptable; however, for some pollutants there may be a moderate health concern for a very small number of people. For example, people who are unusually sensitive to ozone may experience respiratory symptoms. Unusually sensitive people should consider reducing prolonged or heavy outdoor exertion.
   Weather Conditions:
   Temperatures in the upper 70's to lower 80's
   Light to moderate winds
@@ -86,7 +86,7 @@ export const solutionsObj = {
   Conserve electricity-set A/C to highest comfortable level`,
 
   "Unhealthy for sensitive groups": `
-  AQI is 101 to 150. Although general public is not likely to be affected at this AQI range, people with lung disease, older adults and children are at a greater risk from exposure to ozone, whereas persons with heart and lung disease, older adults and children are at greater risk from the presence of particles in the air. 
+  Although general public is not likely to be affected at this AQI range, people with lung disease, older adults and children are at a greater risk from exposure to ozone, whereas persons with heart and lung disease, older adults and children are at greater risk from the presence of particles in the air. 
   Weather Conditions:
   Temperatures in the 80's and 90's
   Light winds
@@ -107,7 +107,7 @@ export const solutionsObj = {
   Barbecue without starter fluid`,
 
   "Unhealthy": `
-  AQI is 151 to 200. Everyone may begin to experience some adverse health effects, and members of the sensitive groups may experience more serious effects.
+  Everyone may begin to experience some adverse health effects, and members of the sensitive groups may experience more serious effects.
   Weather Conditions:
   Hot, hazy, and humid
   Stagnant air
@@ -128,7 +128,7 @@ export const solutionsObj = {
   Barbecue without starter fluid`,
 
   "Very Unhealthy" : `
-  AQI is 201 to 300. This would trigger a health alert signifying that everyone may experience more serious health effects.
+  This would trigger a health alert signifying that everyone may experience more serious health effects.
   Weather Conditions:
   Hot, hazy, and humid
   Stagnant air
@@ -149,7 +149,7 @@ export const solutionsObj = {
   Barbecue without starter fluid`,
 
   "Hazardous": `
-  AQI greater than 300. This would trigger a health warnings of emergency conditions. The entire population is more likely to be affected.
+  This would trigger a health warnings of emergency conditions. The entire population is more likely to be affected.
   Weather Conditions:
   Hot and very hazy
   Extremely stagnant air
