@@ -3,38 +3,28 @@ import axios from 'axios';
 import Searchbar from './Searchbar';
 import PollutionStats from './PollutionStats';
 import { generateStates } from '../constants/constants.js';
-import Modal from './Modal';
 
 const Dropdown = () => {
   const states = generateStates();
   const [selectedCityCard, setSelectedCityCard] = useState([]);
   const [apiData, setApiData] = useState([]);
   const [dropdownState, setDropdownState] = useState('');
-  // These are the hooks that were defined in the Searchbar component before
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   const [apiCityData, setApiCityData] = useState({});
-  // This is the hook that was defined in the PollutionStats component
   const [cityUrl, setCityUrl] = useState('');
-  const [modalState, setModalState] = useState({});
 
-  //                                                       FIRST API BEG
+
   const handleDropdownChange = event => {
     setDropdownState(event.target.value);
     setQuery('');
   };
 
   const handleSelectCity = ({ apiCityData: stats, cityUrl }) => {
-    if (!stats.id)
-      return setModalState({
-        isOpen: true,
-        content: 'Please select a city and state first'
-      });
+
     setSelectedCityCard([...selectedCityCard, { stats, cityUrl }]);
     reset();
   };
-
-  const toggleModal = () => setModalState({});
 
   const reset = () => {
     setApiCityData({});
@@ -69,8 +59,7 @@ const Dropdown = () => {
     };
     getApiData();
   }, [dropdownState]);
-  //                                                       FIRST API END
-  //                                                       SECOND API BEG
+
   const handleSearchbarChange = event => {
     setSearch(event.target.value);
   };
@@ -81,8 +70,6 @@ const Dropdown = () => {
   };
 
   useEffect(() => {
-    // Had to capitalize the first letter of the query because the stored
-    // city names in selectedCityCard are returned capitalized by the API
     if (
       !query ||
       selectedCityCard.some(
@@ -179,7 +166,6 @@ const Dropdown = () => {
           />
         )}
       </div>
-      <Modal {...modalState} toggleModal={toggleModal} />
     </div>
   );
 };

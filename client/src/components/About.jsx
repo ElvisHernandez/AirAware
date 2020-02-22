@@ -40,9 +40,7 @@ const About = () => {
         })}
       </div>
       <div className="hr"><hr /></div>
- 
-      <img href="logo.png"/>
-    </>
+     </>
   );
 };
 
