@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Searchbar from './Searchbar';
 import PollutionStats from './PollutionStats';
-import { generateStates } from '../index.jsx';
+import { generateStates } from '../constants/constants.js';
 import Modal from './Modal';
 
 const Dropdown = () => {
