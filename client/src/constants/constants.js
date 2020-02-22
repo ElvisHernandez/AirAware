@@ -53,6 +53,29 @@ export const generateStates = () => { return ([
 ])
 };
 
+export const theTeam = [
+   {
+    name: "Elvis Hernandez",
+    picPath: require("../images/AboutImages/HernandezElvis.jpg"),
+    linkedin: "https://www.linkedin.com/in/elvis-hernandez-9669a618a/"
+  },
+  {
+    name: "Krisi Keranova",
+    picPath: require("../images/AboutImages/KeranoraKrisi.jpg"),
+    linkedin: "https://www.linkedin.com/in/krisi-keranova-9bbba819/"
+  },
+  {
+    name: "Iman Bashir",
+    picPath: require("../images/AboutImages/BashirIman.jpg"),
+    linkedin: "https://www.linkedin.com/in/imanbashir/"
+  },
+  {
+    name: "Julio Acceus",
+    picPath: require("../images/AboutImages/AcceusJulio.jpg"),
+    linkedin: "https://www.linkedin.com/in/julio-acceus-68901b98/"
+  }
+]
+
 export const aqiToCig = 1 / 72; // converts the AQI to approximate number of cigarettes smoked per day
 
 export const hazardLevels = [
