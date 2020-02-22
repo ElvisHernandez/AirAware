@@ -1,8 +1,8 @@
 import React from 'react';
-import AcceusJulio from './AboutImages/AcceusJulio.jpg';
-import BashirIman from './AboutImages/BashirIman.jpg';
-import HernandezElvis from './AboutImages/HernandezElvis.jpg';
-import KeranoraKrisi from './AboutImages/KeranoraKrisi.jpg';
+import AcceusJulio from '../images/AboutImages/AcceusJulio.jpg';
+import BashirIman from '../images/AboutImages/BashirIman.jpg';
+import HernandezElvis from '../images/AboutImages/HernandezElvis.jpg';
+import KeranoraKrisi from '../images/AboutImages/KeranoraKrisi.jpg';
 
 const About = () => {
   return (
