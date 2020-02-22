@@ -1,3 +1,81 @@
+
+export const generateStates = () => { return ([
+  'Alabama',
+  'Alaska',
+  'Arizona',
+  'Arkansas',
+  'California',
+  'Colorado',
+  'Connecticut',
+  'Delaware',
+  'Florida',
+  'Georgia',
+  'Hawaii',
+  'Idaho',
+  'Illinois',
+  'Indiana',
+  'Iowa',
+  'Kansas',
+  'Kentucky',
+  'Louisiana',
+  'Maine',
+  'Maryland',
+  'Massachusetts',
+  'Michigan',
+  'Minnesota',
+  'Mississippi',
+  'Missouri',
+  'Montana',
+  'Nebraska',
+  'Nevada',
+  'New Hampshire',
+  'New Jersey',
+  'New Mexico',
+  'New York',
+  'North Carolina',
+  'North Dakota',
+  'Ohio',
+  'Oklahoma',
+  'Oregon',
+  'Pennsylvania',
+  'Rhode Island',
+  'South Carolina',
+  'South Dakota',
+  'Tennessee',
+  'Texas',
+  'Utah',
+  'Vermont',
+  'Virginia',
+  'Washington',
+  'West Virginia',
+  'Wisconsin',
+  'Wyoming'
+])
+};
+
+export const theTeam = [
+   {
+    name: "Elvis Hernandez",
+    picPath: require("../images/AboutImages/HernandezElvis.jpg"),
+    linkedin: "https://www.linkedin.com/in/elvis-hernandez-9669a618a/"
+  },
+  {
+    name: "Krisi Keranova",
+    picPath: require("../images/AboutImages/KeranoraKrisi.jpg"),
+    linkedin: "https://www.linkedin.com/in/krisi-keranova-9bbba819/"
+  },
+  {
+    name: "Iman Bashir",
+    picPath: require("../images/AboutImages/BashirIman.jpg"),
+    linkedin: "https://www.linkedin.com/in/imanbashir/"
+  },
+  {
+    name: "Julio Acceus",
+    picPath: require("../images/AboutImages/AcceusJulio.jpg"),
+    linkedin: "https://www.linkedin.com/in/julio-acceus-68901b98/"
+  }
+]
+
 export const aqiToCig = 1 / 72; // converts the AQI to approximate number of cigarettes smoked per day
 
 export const hazardLevels = [

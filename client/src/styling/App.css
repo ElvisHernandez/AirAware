@@ -28,7 +28,7 @@ body {
   line-height: 1.75;
   color: rgb(127, 124, 124);
   background-color: #ffffff;
-  background-image: url('../components/AboutImages/downarrow.png');
+  background-image: url('../images/AboutImages/downarrow.png');
   background-repeat: no-repeat;
   background-size: 0.75rem;
   background-position: 12.3rem, center;
@@ -57,7 +57,7 @@ body {
   height: 2.1rem;
   border-radius: 0.2rem;
   border: 1px solid #bebebe;
-  background-image: url('../components/AboutImages/downarrow.png');
+  background-image: url('../images/AboutImages/downarrow.png');
   background-repeat: no-repeat;
   background-size: 0.75rem;
   background-position: 12.3rem, center;
@@ -191,7 +191,7 @@ hr.style-one {
 }
 
 .top-banner {
-  background-image: url('../components/AboutImages/banner\ image.jpg');
+  background-image: url('../images/AboutImages/banner\ image.jpg');
   height: 85vh;
   width: 100%;
   background-size: 100% 85vh;
@@ -202,7 +202,7 @@ hr.style-one {
 }
 
 .top-banner-inner-pages {
-  background-image: url('../components/AboutImages/banner\ image\ side\ pagea.jpg');
+  background-image: url('../images/AboutImages/banner\ image\ side\ pagea.jpg');
   height: 40vh;
   width: 100%;
   background-size: 100% 35vh;
@@ -259,7 +259,7 @@ hr.style-one {
 }
 
 .bottom-image {
-  background-image: url('../components/AboutImages/bottom-image.png');
+  background-image: url('../images/AboutImages/bottom-image.png');
   height: 60vh;
   width: 100%;
   background-size: 100% 60vh;
