@@ -1,5 +1,5 @@
 import React from 'react';
-import { theTeam } from "../constants/constants.js"
+import { theTeam } from "../../constants/constants.js"
 
 const About = () => {
   return (

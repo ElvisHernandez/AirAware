@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Searchbar from './Searchbar';
 import PollutionStats from './PollutionStats';
-import { generateStates } from '../constants/constants.js';
+import { generateStates } from '../../constants/constants.js';
 
 const Dropdown = () => {
   const states = generateStates();

@@ -1,5 +1,5 @@
 import React from 'react';
-import { aqiToCig, hazardLevels, solutionsObj } from '../constants/constants.js';
+import { aqiToCig, hazardLevels, solutionsObj } from '../../constants/constants.js';
 
   const OneCity = ({ location }) => {
     const {

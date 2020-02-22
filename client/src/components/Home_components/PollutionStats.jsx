@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styling/App.css';
+import '../../styling/App.css';
 import Card from './Card';
 
 const PollutionStats = ({ stats, cityUrl, remove, weather }) => {
