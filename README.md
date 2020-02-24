@@ -1,67 +1,51 @@
-# Node / Create-React-App mashup
+An AirPollution Tracker built with React + Node.JS/Express
 
-Read the instructions thoroughly before starting your project.
+This API was supported by Material-UI. Learn more: https://material-ui.com/
 
-## Setup (Krisi was here!!)
+## What is this and who is it for 🤷‍
 
-- `git clone` this repo
-- `cd` into it.
-- `yarn install`
-- `cd client && yarn install`
+AirAware is a consulting company that provides businesses and individuals with everyday air pollution information in the United States and solutions.
+You are able to compare statisistics about air pollution between cities. The measurements for comparison are Air Quality Index (AQI) & Particulate matter(PM). We also added a comparison of how much would each Air Quality Index information correspond to smoking a cigarette per day. This way people could relate or understand better the matter of air pollution.
+You are able to go into Details of each City to view further information such as weather and sollutions.
+We have addeed two more sections, one called About page with information about us and one with solutions.
 
-## To run your Express.JS and React developer environment locally
+### Features
 
-Make sure you are in your project's directory, and then:
+- Our application was built with React, including functional components with hooks.
+- We have added a card component with Material-UI in the main page, spread operator, destructuring assignment, formulas.
+- API written in JavaScript using Express.
 
-```
-yarn dev
-```
+### Setting up development environment
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.
+- git clone git@github.com:wyncode/C36_midterm_elvis_iman_julio_krissy.git
+- To install the dependencies on the backend you must yarn in the root directory of the project
+  then to install the dependencies of the front end you must cd into the client directory and
+  yarn there as well
+- import React from 'react';
+- import { BrowserRouter, Switch, Route } from 'react-router-dom';
+- create an account on AirVisuals website to get API key (https://www.airvisual.com/)
+- Create an empty .env file in root directory and paste your API key in there
 
-## To deploy
+### Starting up the app
 
-- `heroku create your-app-name`
-- `git push heroku master`
+- in the root directory yarn dev
+- App should now be running on http://localhost:8080/
 
-## Project Requirements
+### Authors:
 
-- [ ] Your project should pull data from an API. There are lots of options [here](https://github.com/toddmotto/public-apis) and [here](https://market.mashape.com/).
-  - Avoid any APIs that require OAuth (we'll talk about that later).
-  - Many APIs require an API key. Just sign up for an account and attach the key to your URL. Please make sure not to share your secret keys in a public GitHub repo.
-  - Some APIs don't allow _Cross-Origin Resource Sharing_ (CORS), meaning you can't make AJAX requests to them. You can get around this by proxying your requests with your Express server.
-- [ ] Your project should render a list of data from the API.
-  - [ ] Your project should allow the list to be filtered or searched.
-- [ ] Your project should show details about a single resource when clicked.
-- [ ] Your project should look (really) pretty!
-- [ ] You and your team should employ good Git and GitHub collaboration practices.
-- [ ] Your project must have a README.md file explaining what the project does and why it matters. [Here's an example](https://github.com/codeforamerica/howto/blob/master/Good-READMEs.md) of a great README.md template.
+- Julio Acceus, Iman Bashir, Elvis Hernandez, Krisi Keranova. We are students of Wyncode Academy and this is our midterm project. For more information you can follow our individual LinkedIn accounts linked to our photos in the About page.
 
-| Rubric Criterion                                                                                        | Points |
-| ------------------------------------------------------------------------------------------------------- | ------ |
-| Ability to search or filter, use of React Router                                                        | 10     |
-| Code formatting and quality: indentation, variable and file naming conventions, etc.                    | 10     |
-| No unused variables or imports, compiler errors                                                         | 10     |
-| Use of class components or react hooks when state is needed and functional components when state is not | 10     |
-| Proper use of environment variables for API keys or CORS proxy if needed                                | 10     |
-| Overall look and feel of application, well organized CSS files                                          | 10     |
-| Well written documentation                                                                              | 10     |
-| Use of GitHub issues, branches and commit messages                                                      | 10     |
-| Look and feel of demo slide deck                                                                        | 10     |
-| Ability to explain code decisions in demo                                                               | 10     |
-| Ability to defend code decisions in response to panel questions                                         | 10     |
+### Further info on the App process
 
-## Bonus
+We have extracted info from four API endpoints using express. The first three APIs provide information about the States and cities, and the city pollution stats while the fourth is giving us an image of the corresponding city.
+We created a dropdown menu, serch bar and added a material UI component - card in the main page.
 
-- Fanciful animations and transitions
-- Incorporate multiple APIs into a single app
+### What's missing?
 
-## Demo Requirements
+We want to make it so that a user's list of cities saves on the backend so that if they decide to
+view a speicific city page for example, then when they return to the home page their list would
+still be there.
 
-Create a slide deck for the technical panel. (Here's an [example](https://docs.google.com/presentation/d/15rfR-S5qAlzx4rHwBp_kJOlu0nQ7hcZOruTwbH6zRvQ/edit?usp=sharing).)
+We would like to add the Google API so users can have a better view and understanding of areas with pollution.
 
-- It should focus on _how_ you built the app.
-- Include code snippets with brief explanations. Or, specific references to the location of the code in your GitHub repo.
-- It should emphasize your technical setbacks and solutions.
-- Get straight to the point.
-- Be prepared to answer questions.
+### For more information on air quality visit https://www.airvisual.com/
