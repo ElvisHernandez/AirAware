@@ -12,8 +12,12 @@ export const ApiProvider = ({children}) => {
     const [apiCityData, setApiCityData] = useState({});
     const [cityUrl, setCityUrl] = useState('');
     
-    const [selectedCityCard, setSelectedCityCard] = useState([]);
+    const [selectedCityCard, setSelectedCityCard] = useState(JSON.parse(sessionStorage.getItem("objectInStorage")) ||[]);
 
+    useEffect(() => {
+      sessionStorage.setItem('objectInStorage', JSON.stringify(selectedCityCard))
+    }, [selectedCityCard])
+    
     const handleSubmit = event => {
         event.preventDefault();
         setQuery(search);
