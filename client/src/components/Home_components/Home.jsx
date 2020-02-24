@@ -12,7 +12,7 @@ const Home = () => {
           cityUrl,
           selectedCityCard } = useContext(ApiContext)
   return (
-    <div className="home">
+    <div className="home top-banner">
       <div className="dropdown-titles">
         <h1>Check Your Air Quality</h1>
         <h5>Discover real-time air quality and solutions anywhere in the US</h5>
