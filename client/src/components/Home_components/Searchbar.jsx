@@ -1,19 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {ApiContext} from '../context/ApiContext'
 
 
-const Searchbar = ({handleSubmit,handleSearchbarChange,cities, search}) => {
+const Searchbar = () => {
+  const {apiCityList ,search, setSearch, setQuery} = useContext(ApiContext)
+
   return (
-    <form id="searchbar-form" onSubmit={handleSubmit}>                 
+    <form id="searchbar-form" onSubmit={e => {
+      e.preventDefault()
+      setQuery(search)
+    }}>                 
       <input 
       id ="citySearchbar" 
       list="cityList" 
       placeholder="City"
-      onChange={handleSearchbarChange}
+      onChange={e => {setSearch(e.target.value)}}
       value={search}
       >
       </input>
       <datalist id="cityList">
-        {cities.map((state, index) => {
+        {apiCityList.map((state, index) => {
           return (
             <option key={index} value={state}>
               {state}
