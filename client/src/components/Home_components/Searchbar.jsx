@@ -3,13 +3,10 @@ import {ApiContext} from '../context/ApiContext'
 
 
 const Searchbar = () => {
-  const {apiCityList ,search, setSearch, setQuery} = useContext(ApiContext)
+  const {handleSubmit, apiCityList ,search, setSearch, setQuery} = useContext(ApiContext)
 
   return (
-    <form id="searchbar-form" onSubmit={e => {
-      e.preventDefault()
-      setQuery(search)
-    }}>                 
+    <form id="searchbar-form" onSubmit={handleSubmit}>                 
       <input 
       id ="citySearchbar" 
       list="cityList" 

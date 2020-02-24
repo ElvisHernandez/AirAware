@@ -115,25 +115,25 @@ const Dropdown = () => {
         <select
           value={dropdownState}
           id="dropdown"
-          // onChange={handleDropdownChange}
+          onChange={handleDropdownChange}
         >
           <option value={null}>State</option>
-          {/* {states.map((state, index) => {
+          {states.map((state, index) => {
             return (
               <option key={index} value={state}>
                 {state}
               </option>
             );
-          })} */}
+          })}
         </select>
-        {/* <Searchbar
+        <Searchbar
           handleSearchbarChange={handleSearchbarChange}
           handleSubmit={handleSubmit}
           cities={apiData}
           search={search}
-        /> */}
+        />
       </div>
-{/* 
+
       <div className="buttons-div">
         <button onClick={handleSubmit} id="checkCity">
           CHECK CITY
@@ -165,7 +165,7 @@ const Dropdown = () => {
             remove={removeCard}
           />
         )}
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -32,6 +32,38 @@ export const ApiProvider = ({children}) => {
     const [cityUrl, setCityUrl] = useState('');
     ////////////////////////////////////////////////////
 
+    const [selectedCityCard, setSelectedCityCard] = useState([]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+        setQuery(search);
+    };
+
+    const handleSelectCity = ({ apiCityData: stats, cityUrl }) => {
+        setSelectedCityCard([...selectedCityCard, { stats, cityUrl }]);
+        reset();
+    };
+
+    const reset = () => {
+        setApiCityData({});
+        setCityUrl('');
+        setDropdownState('');
+        setQuery('');
+        setSearch('');
+    };
+
+    const removeCard = card => {
+        dropdownState === '' ? setDropdownState(' ') : setDropdownState('');
+        const indexToRemove = selectedCityCard.findIndex(({ stats }) => {
+        return stats.id === card.stats.id;
+        });
+        if (indexToRemove === -1) {
+        reset();
+        return;
+        }
+        selectedCityCard.splice(indexToRemove, 1);
+        setSearch('');
+    };
 
   // This useEffect retrieves an array of all supported cities in a state
   // when the user chooses a state from the dropdown box. The cities array
@@ -83,6 +115,9 @@ export const ApiProvider = ({children}) => {
     
     return(
         <ApiContext.Provider value={{
+            handleSubmit, handleSelectCity,
+            removeCard,
+            selectedCityCard,
             dropdownState, setDropdownState,
             apiCityList,
             search, setSearch,

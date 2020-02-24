@@ -4,7 +4,7 @@ import { ApiContext } from '../context/ApiContext.jsx'
 
 const Dropdown = () => {
     const {dropdownState, setDropdownState} = useContext(ApiContext)
-    
+
     return(
         <>
             <label htmlFor="dropdown"></label>
