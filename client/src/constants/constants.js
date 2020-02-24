@@ -1,5 +1,5 @@
 
-export const generateStates = () => { return ([
+export const states = [
   'Alabama',
   'Alaska',
   'Arizona',
@@ -50,8 +50,7 @@ export const generateStates = () => { return ([
   'West Virginia',
   'Wisconsin',
   'Wyoming'
-])
-};
+];
 
 export const theTeam = [
    {

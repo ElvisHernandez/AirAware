@@ -7,6 +7,7 @@ import OneCity from './OneCity_components/OneCity';
 import Home from './Home_components/Home';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import {ApiProvider} from './context/ApiContext'
 
 class App extends React.Component {
   render() {
@@ -14,10 +15,12 @@ class App extends React.Component {
       <BrowserRouter>
         <Navigation />
         <Switch>
-          <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/city/:city" component={OneCity} />
           <Route exact path="/solutions" component={Solutions} />
+          <ApiProvider>
+            <Route exact path="/" component={Home} />
+          </ApiProvider>
         </Switch>
         <Footer />
       </BrowserRouter>
