@@ -1,47 +1,22 @@
 import React, {useState, createContext, useEffect, useReducer} from 'react';
 import axios from 'axios'
-// import AppReducer from './AppReducer'
-
-
-// const initialState = {
-//     cityData: {
-//         id: '',
-//         city: '',
-//         state: '',
-//         picSrc: '',
-//         stats: {},
-//     }
-// }
-
 
 export const ApiContext = createContext();
 
-
 export const ApiProvider = ({children}) => {
-    ///////////////////////////////////////////////////
-    // const [state, dispatch] = useReducer(AppReducer, initialState)
     const [dropdownState, setDropdownState] = useState('');
-    // const [apiData, setApiData] = useState([]);
     const [apiCityList, setApiCityList] = useState([])
-    ////////////////////////////////////////////////////
     
-    ////////////////////////////////////////////////////
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState('');
     const [apiCityData, setApiCityData] = useState({});
     const [cityUrl, setCityUrl] = useState('');
-    ////////////////////////////////////////////////////
-
+    
     const [selectedCityCard, setSelectedCityCard] = useState([]);
 
     const handleSubmit = event => {
         event.preventDefault();
         setQuery(search);
-    };
-
-    const handleSelectCity = ({ apiCityData: stats, cityUrl }) => {
-        setSelectedCityCard([...selectedCityCard, { stats, cityUrl }]);
-        reset();
     };
 
     const reset = () => {
@@ -50,6 +25,11 @@ export const ApiProvider = ({children}) => {
         setDropdownState('');
         setQuery('');
         setSearch('');
+    };
+
+    const handleSelectCity = ({ apiCityData: stats, cityUrl }) => {
+        setSelectedCityCard([...selectedCityCard, { stats, cityUrl }]);
+        reset();
     };
 
     const removeCard = card => {
@@ -74,20 +54,20 @@ export const ApiProvider = ({children}) => {
     const getApiData = async () => {
       const { data } = await axios.get(`/api/${dropdownState}`);
       setApiCityList(data.map(({ city }) => city));
-    //   console.log(data.map(({ city }) => city))
     };
     getApiData();
   }, [dropdownState]);
 
-
+  // This useEffect retrieves the pollutions stats and city pic
+  // url for a specified city when the datalist form is submitted.
   useEffect(() => {
-    if (!query
-    //   !query ||
-    //   selectedCityCard.some(
-    //     ({ stats }) =>
-    //       stats.id ===
-    //       `${query[0].toUpperCase() +
-    //         query.slice(1, query.length)}-${dropdownState}`)
+    if (
+      !query ||
+      selectedCityCard.some(
+        ({ stats }) =>
+          stats.id ===
+          `${query[0].toUpperCase() +
+            query.slice(1, query.length)}-${dropdownState}`)
       ) {return;}
     const fetchCityData = async () => {
       const requests = [
@@ -105,14 +85,11 @@ export const ApiProvider = ({children}) => {
       ] = await Promise.all(requests);
       setApiCityData({ ...pollutionData, city: query, state: dropdownState });
       setCityUrl(cityPicData);
-      console.log(pollutionData)
-      console.log(cityPicData)
     };
 
     fetchCityData();
   }, [query]);
-
-    
+ 
     return(
         <ApiContext.Provider value={{
             handleSubmit, handleSelectCity,

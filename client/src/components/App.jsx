@@ -15,12 +15,12 @@ class App extends React.Component {
       <BrowserRouter>
         <Navigation />
         <Switch>
-          <ApiProvider>
-            <Route exact path="/" component={Home} />
-          </ApiProvider>
           <Route exact path="/about" component={About} />
           <Route exact path="/city/:city" component={OneCity} />
           <Route exact path="/solutions" component={Solutions} />
+          <ApiProvider>
+            <Route exact path="/" component={Home} />
+          </ApiProvider>
         </Switch>
         <Footer />
       </BrowserRouter>
