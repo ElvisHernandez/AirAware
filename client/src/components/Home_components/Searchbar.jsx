@@ -15,7 +15,7 @@ const Searchbar = () => {
       list="cityList" 
       placeholder="City"
       onChange={e => {setSearch(e.target.value)}}
-      value={search}
+      // value={search}
       >
       </input>
       <datalist id="cityList">

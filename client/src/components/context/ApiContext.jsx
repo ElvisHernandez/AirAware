@@ -24,7 +24,7 @@ export const ApiProvider = ({children}) => {
     // const [apiData, setApiData] = useState([]);
     const [apiCityList, setApiCityList] = useState([])
     ////////////////////////////////////////////////////
-
+    
     ////////////////////////////////////////////////////
     const [search, setSearch] = useState('');
     const [query, setQuery] = useState('');
@@ -42,10 +42,43 @@ export const ApiProvider = ({children}) => {
     const getApiData = async () => {
       const { data } = await axios.get(`/api/${dropdownState}`);
       setApiCityList(data.map(({ city }) => city));
-      console.log(data.map(({ city }) => city))
+    //   console.log(data.map(({ city }) => city))
     };
     getApiData();
   }, [dropdownState]);
+
+
+  useEffect(() => {
+    if (!query
+    //   !query ||
+    //   selectedCityCard.some(
+    //     ({ stats }) =>
+    //       stats.id ===
+    //       `${query[0].toUpperCase() +
+    //         query.slice(1, query.length)}-${dropdownState}`)
+      ) {return;}
+    const fetchCityData = async () => {
+      const requests = [
+        axios.get(`/api/${dropdownState}/${query}`),
+        axios.get(
+          `/image/${query
+            .toLowerCase()
+            .split(' ')
+            .join('-')}`
+        )
+      ];
+      const [
+        { data: pollutionData },
+        { data: cityPicData }
+      ] = await Promise.all(requests);
+      setApiCityData({ ...pollutionData, city: query, state: dropdownState });
+      setCityUrl(cityPicData);
+      console.log(pollutionData)
+      console.log(cityPicData)
+    };
+
+    fetchCityData();
+  }, [query]);
 
     
     return(
