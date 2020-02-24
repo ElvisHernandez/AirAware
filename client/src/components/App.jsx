@@ -12,18 +12,18 @@ import {ApiProvider} from './context/ApiContext'
 class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
-        <Navigation />
-        <Switch>
-          <Route exact path="/about" component={About} />
-          <Route exact path="/city/:city" component={OneCity} />
-          <Route exact path="/solutions" component={Solutions} />
-          <ApiProvider>
-            <Route exact path="/" component={Home} />
-          </ApiProvider>
-        </Switch>
-        <Footer />
-      </BrowserRouter>
+      <ApiProvider>
+        <BrowserRouter>
+          <Navigation />
+          <Switch>
+            <Route exact path="/about" component={About} />
+            <Route exact path="/city/:city" component={OneCity} />
+            <Route exact path="/solutions" component={Solutions} />
+              <Route exact path="/" component={Home} />          
+          </Switch>
+          <Footer />
+        </BrowserRouter>
+      </ApiProvider>  
     );
   }
 }
