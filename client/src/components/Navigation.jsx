@@ -7,22 +7,19 @@ const Navigation = () => {
     <div className="container center nav-bar">
       <ul className="menu">
         <li>
-          {' '}
           <Link to="/about" className="menu__link">
             About
-          </Link>{' '}
+          </Link>
         </li>
-        <li>
-          {' '}
+        <li className="logo-list-item">
           <Link to="/" className="menu__link-logo">
             <img src={logo} alt="logo" className="logo-img" />
           </Link>
         </li>
         <li>
-          {' '}
           <Link to="/solutions" className="menu__link">
             Solutions
-          </Link>{' '}
+          </Link>
         </li>
       </ul>
     </div>
